@@ -73,7 +73,7 @@ Todos los datos estan en `src/config/ecosystem.ts`:
 | Archivo | Ubicacion | Estado |
 |---------|-----------|--------|
 | ronaldo.jpg | `/public/ronaldo.jpg` | OK |
-| og-image.png | `/public/og-image.png` | PENDIENTE |
+| og-image.png | `/public/og-image.png` | OK |
 
 ## Comandos
 
