@@ -8,24 +8,24 @@ import {
 const contactOptions = [
   {
     icon: ChatBubbleLeftRightIcon,
-    title: "Hablemos",
-    description: "DM en Instagram para consultas rápidas",
+    title: "DM me",
+    description: "La forma más rápida de contactarme",
     href: ECOSYSTEM.author.instagram,
     label: "@_ronaldopaulino",
     color: "from-pink-500 to-rose-500",
   },
   {
     icon: CodeBracketIcon,
-    title: "Colaboremos",
-    description: "Proyectos open source y contribuciones",
+    title: "Fork my stuff",
+    description: "Todo mi código es open source",
     href: ECOSYSTEM.author.github,
     label: "GitHub",
     color: "from-gray-400 to-gray-600",
   },
   {
     icon: EnvelopeIcon,
-    title: "Proyectos",
-    description: "Para propuestas de trabajo o partnerships",
+    title: "Work together",
+    description: "Proyectos serios y partnerships",
     href: `mailto:${ECOSYSTEM.author.email}`,
     label: ECOSYSTEM.author.email,
     color: "from-indigo-500 to-purple-500",
@@ -45,16 +45,16 @@ export function CTA() {
         <div className="mx-auto max-w-2xl text-center">
           {/* Main heading */}
           <h2 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
-            ¿Listo para construir algo{" "}
+            Let's build something{" "}
             <span className="bg-amber-100 text-zinc-900 px-3 py-1 rounded-lg">
-              increíble
+              cool
             </span>
-            ?
           </h2>
 
           <p className="mt-6 text-lg text-gray-400 max-w-xl mx-auto">
-            Ya sea que tengas una idea, necesites ayuda técnica, o quieras
-            colaborar en un proyecto — estoy disponible para escucharte.
+            ¿Tienes una idea? ¿Necesitas un dev? ¿Quieres colaborar?
+            <br />
+            Solo escríbeme.
           </p>
 
           {/* Primary CTA */}
@@ -66,7 +66,7 @@ export function CTA() {
               className="inline-flex items-center gap-2 rounded-xl bg-indigo-500 px-8 py-4 text-lg font-semibold text-white shadow-lg shadow-indigo-500/25 hover:bg-indigo-400 transition-all hover:scale-105"
             >
               <ChatBubbleLeftRightIcon className="size-6" />
-              Envíame un mensaje
+              Hit me up
             </a>
           </div>
 

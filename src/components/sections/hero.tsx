@@ -165,16 +165,16 @@ export function Hero() {
 
           {/* Titles */}
           <p className="mt-4 text-xl text-indigo-400 font-semibold">
-            {ECOSYSTEM.author.title}
+            Software Engineer & Entrepreneur
           </p>
-          <p className="mt-1 text-lg text-gray-300">
-            {ECOSYSTEM.author.subtitle}
+          <p className="mt-1 text-lg text-gray-400">
+            Haciendo cosas cool en República Dominicana
           </p>
 
           {/* Description */}
           <p className="mt-6 text-lg/7 text-gray-300 max-w-xl mx-auto text-pretty">
-            Construyo productos digitales que resuelven problemas reales.
-            Desde traducción de libros con IA hasta sistemas de facturación fiscal.
+            Creo productos que la gente realmente usa. IA, e-commerce,
+            fintech — si tiene código, probablemente lo puedo construir.
           </p>
 
           {/* CTAs */}
@@ -198,7 +198,7 @@ export function Hero() {
           {/* Partner logos */}
           <div className="mt-12 pt-8 border-t border-white/10">
             <p className="text-xs text-gray-500 uppercase tracking-wider mb-4">
-              Trabajo con
+              Building with
             </p>
             <div className="flex items-center justify-center gap-8">
               {partnerLogos.map(({ name, Logo }) => (

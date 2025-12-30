@@ -13,10 +13,10 @@ const projects = [
   {
     id: "curet",
     name: "CURET",
-    tagline: "La Zapatería Dominicana",
+    tagline: "Cuero dominicano, calidad mundial",
     url: "https://curetshop.com",
     description:
-      "E-commerce de calzado y accesorios de cuero hechos por manos dominicanas. Desde 2017 ofreciendo productos de calidad con envíos a todo el país.",
+      "El e-commerce de calzado más confiable de RD. +100K clientes, rating 4.8 en Google. Zapatos hechos a mano que duran años.",
     icon: ShoppingBagIcon,
     gradient: "from-amber-500 to-orange-600",
     highlightColor: "bg-amber-100 text-amber-900",
@@ -43,10 +43,10 @@ const projects = [
   {
     id: "lectorai",
     name: "LectorAI",
-    tagline: "Traductor de Libros con IA",
+    tagline: "Tu biblioteca, cualquier idioma",
     url: "https://lectorai.curetcore.com",
     description:
-      "La herramienta de traducción de libros más avanzada del mercado. Usa inteligencia artificial de última generación para traducir documentos completos manteniendo el contexto y estilo original.",
+      "Traduce libros enteros en minutos, no semanas. IA que entiende contexto, mantiene el estilo, y no suena a Google Translate.",
     icon: BookOpenIcon,
     gradient: "from-indigo-500 to-purple-600",
     highlightColor: "bg-indigo-100 text-indigo-900",
@@ -73,10 +73,10 @@ const projects = [
   {
     id: "ncf",
     name: "NCF Manager",
-    tagline: "Facturación Fiscal Simplificada",
+    tagline: "Facturas en 30 segundos",
     url: "https://ncf.curetcore.com",
     description:
-      "Sistema de facturación fiscal para República Dominicana. Automatiza la generación de NCF, valida RNC con la DGII y envía facturas por email y WhatsApp.",
+      "Olvídate del Excel. Genera NCF válidos, conecta con DGII automáticamente, y envía facturas por WhatsApp. +500 empresas ya lo usan.",
     icon: DocumentTextIcon,
     gradient: "from-emerald-500 to-teal-600",
     highlightColor: "bg-emerald-100 text-emerald-900",
@@ -285,7 +285,6 @@ export function Projects() {
 
                   {/* Title */}
                   <h2 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
-                    Conoce{" "}
                     <span className={`${project.highlightColor} px-3 py-1 rounded-lg`}>
                       {project.name}
                     </span>
