@@ -1,23 +1,31 @@
 # Estado Actual - Curetcore Web
 
 ## Última Sesión
-- **Fecha**: 2025-12-29
-- **Resumen**: Reestructuración completa del flujo narrativo del landing page. Nueva arquitectura de 6 secciones con mejor storytelling.
+- **Fecha**: 2025-12-30
+- **Resumen**: Deploy exitoso a producción en Easypanel. Landing page LIVE en https://curetcore.com
 
-## Archivos Clave Modificados
+## Deploy Completado
+- **Proyecto**: apps/curetcore-web
+- **URL**: https://curetcore.com
+- **Build**: Dockerfile (Next.js standalone)
+- **Puerto interno**: 80 (overriden por Easypanel)
+- **Estado**: ✅ Running
+
+## Archivos Clave
 - `src/app/page.tsx` - Nueva estructura de 6 secciones
 - `src/components/sections/hero.tsx` - Layout 2 columnas, stats integrados, partner logos
-- `src/components/sections/featured-product.tsx` - **NUEVO** - Spotlight de LectorAI con mockup
-- `src/components/sections/products.tsx` - Simplificado (excluye LectorAI)
-- `src/components/sections/cta.tsx` - **NUEVO** - CTA final con opciones de contacto
-- `src/components/ui/logos.tsx` - SVGs reales de partners
-- `src/config/ecosystem.ts` - Agregado email del autor
+- `src/components/sections/featured-product.tsx` - Spotlight de LectorAI
+- `src/components/sections/products.tsx` - NCF Manager + Shopify Apps
+- `src/components/sections/cta.tsx` - CTA final
+- `src/config/ecosystem.ts` - Datos centralizados
+- `Dockerfile` - Multi-stage build para standalone
+- `next.config.ts` - output: "standalone"
 
 ## Estado Actual
-- ✅ Build passing
-- ✅ Dev server corriendo en localhost:3001
+- ✅ Deploy en Easypanel (apps/curetcore-web)
+- ✅ HTTPS funcionando via Cloudflare
 - ✅ Nueva estructura narrativa implementada
-- ✅ Logos SVG reales (Shopify, Apple, AWS, Stripe, etc.)
+- ✅ Logos SVG reales (Shopify, Apple, AWS, Stripe)
 - ✅ Featured Product con mockup interactivo
 - ⚠️ Foto `/public/ronaldo.jpg` pendiente (usando placeholder)
 - ⚠️ OG Image `/public/og-image.png` pendiente
@@ -33,18 +41,18 @@
 6. CTA         → Llamada a la acción final
 ```
 
-## Decisiones Tomadas
-- **Integrar stats en Hero**: Eliminamos sección Stats separada
-- **Featured Product primero**: LectorAI merece spotlight antes de otros productos
-- **CTA con múltiples opciones**: Instagram, GitHub, Email
+## Configuración de Dominio
+- Host: curetcore.com
+- Destino: http://apps_curetcore-web:80/
+- SSL: Via Cloudflare (proxy enabled)
+
+## Notas Técnicas
+- Next.js corre en puerto 80 dentro del contenedor (Easypanel override)
+- La configuración de dominio debe apuntar a :80, no :3000
+- El servicio viejo `curetcore-web_curetcore-web` fue eliminado
 
 ## Próximos Pasos
 1. Agregar foto real de Ronaldo (`/public/ronaldo.jpg`)
 2. Crear OG Image para compartir en redes
-3. Configurar deploy en Easypanel
-4. Verificar SEO y JSON-LD
-
-## Notas para Próxima Sesión
-- El dev server ya está corriendo en puerto 3001
-- Build pasa sin errores
-- Secciones `stats.tsx` y `social-proof.tsx` ya no se usan pero aún existen
+3. Verificar SEO y JSON-LD
+4. Limpiar archivos no usados (stats.tsx, social-proof.tsx)

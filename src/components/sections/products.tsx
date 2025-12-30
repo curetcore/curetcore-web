@@ -1,7 +1,6 @@
 import { ECOSYSTEM } from "@/config/ecosystem";
 import {
   DocumentTextIcon,
-  ShoppingBagIcon,
   ArrowRightIcon,
   UserGroupIcon,
   CheckBadgeIcon,
@@ -11,13 +10,11 @@ import { StarIcon } from "@heroicons/react/24/solid";
 
 const iconMap = {
   DocumentTextIcon,
-  ShoppingBagIcon,
 };
 
 const platformLabels = {
   web: "Web App",
   apple: "App Store",
-  shopify: "Shopify App",
 };
 
 export function Products() {
@@ -42,23 +39,25 @@ export function Products() {
             <RocketLaunchIcon className="size-4" />
             Más productos
           </div>
-          <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-            Otras soluciones en producción
+          <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+            También en{" "}
+            <span className="bg-emerald-100 text-emerald-900 px-2 py-0.5 rounded-lg">
+              producción
+            </span>
           </h2>
           <p className="mt-4 text-lg text-gray-400 max-w-2xl mx-auto">
-            Herramientas especializadas para negocios dominicanos y comerciantes
-            de Shopify.
+            Herramientas especializadas para negocios dominicanos.
           </p>
         </div>
 
-        {/* Products - 2 column layout */}
-        <div className="grid gap-8 lg:grid-cols-2 max-w-4xl mx-auto">
+        {/* Products - centered for single/few items */}
+        <div className="grid gap-8 max-w-2xl mx-auto">
           {otherApps.map((app) => {
             const Icon = iconMap[app.icon as keyof typeof iconMap];
             return (
               <div
                 key={app.name}
-                className="group relative flex flex-col sm:flex-row gap-6 rounded-2xl bg-gray-800/30 p-6 ring-1 ring-white/5 transition-all duration-300 hover:bg-gray-800/50 hover:ring-white/10"
+                className="group relative flex flex-col sm:flex-row gap-6 rounded-2xl bg-gray-800/30 p-6 ring-1 ring-white/5 transition-all duration-300 hover:bg-gray-800/50 hover:ring-indigo-500/30 hover:shadow-lg hover:shadow-indigo-500/10 hover:scale-[1.02]"
               >
                 {/* Icon */}
                 <div

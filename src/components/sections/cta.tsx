@@ -38,15 +38,15 @@ export function CTA() {
       {/* Background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-linear-to-b from-transparent via-indigo-500/5 to-transparent" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-[800px] rounded-full bg-indigo-500/10 blur-[128px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-[800px] rounded-full bg-indigo-500/10 blur-3xl" />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           {/* Main heading */}
-          <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
+          <h2 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
             ¿Listo para construir algo{" "}
-            <span className="bg-linear-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+            <span className="bg-amber-100 text-zinc-900 px-3 py-1 rounded-lg">
               increíble
             </span>
             ?

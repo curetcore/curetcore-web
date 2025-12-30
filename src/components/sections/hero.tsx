@@ -19,10 +19,9 @@ export function Hero() {
 
   return (
     <div className="relative bg-gray-900 overflow-hidden">
-      {/* Background effects */}
+      {/* Background effects - optimizado */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 size-[500px] rounded-full bg-indigo-500/20 blur-[128px]" />
-        <div className="absolute bottom-0 right-1/4 size-[400px] rounded-full bg-purple-500/20 blur-[128px]" />
+        <div className="absolute top-1/4 left-1/3 size-[600px] rounded-full bg-indigo-500/15 blur-3xl" />
       </div>
 
       {/* Header */}
@@ -138,24 +137,24 @@ export function Hero() {
                 </div>
               </div>
 
-              {/* Quick stats under photo */}
+              {/* Quick stats under photo - más prominentes */}
               <div className="mt-8 flex items-center gap-6 text-center lg:text-left">
                 <div>
-                  <div className="text-2xl font-bold text-white">8+</div>
-                  <div className="text-xs text-gray-500">Años</div>
+                  <div className="text-3xl font-extrabold text-white">8+</div>
+                  <div className="text-xs text-gray-400 font-medium">Años</div>
                 </div>
-                <div className="h-8 w-px bg-white/10" />
+                <div className="h-10 w-px bg-white/10" />
                 <div>
-                  <div className="text-2xl font-bold text-white">100K+</div>
-                  <div className="text-xs text-gray-500">Clientes</div>
+                  <div className="text-3xl font-extrabold text-white">100K+</div>
+                  <div className="text-xs text-gray-400 font-medium">Clientes</div>
                 </div>
-                <div className="h-8 w-px bg-white/10" />
+                <div className="h-10 w-px bg-white/10" />
                 <div className="flex flex-col items-center lg:items-start">
-                  <div className="flex items-center gap-1">
-                    <span className="text-2xl font-bold text-white">4.8</span>
-                    <StarIcon className="size-5 text-amber-400" />
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-3xl font-extrabold text-white">4.8</span>
+                    <StarIcon className="size-6 text-amber-400" />
                   </div>
-                  <div className="text-xs text-gray-500">Google</div>
+                  <div className="text-xs text-gray-400 font-medium">Google</div>
                 </div>
               </div>
             </div>
@@ -168,28 +167,31 @@ export function Hero() {
                 Disponible para proyectos
               </div>
 
-              <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-                {ECOSYSTEM.author.name}
+              <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-7xl">
+                Ronaldo{" "}
+                <span className="bg-amber-100 text-zinc-900 px-3 py-1 rounded-lg">
+                  Paulino
+                </span>
               </h1>
 
-              <p className="mt-2 text-xl text-indigo-400 font-medium">
+              <p className="mt-4 text-xl text-indigo-400 font-semibold">
                 {ECOSYSTEM.author.title}
               </p>
 
-              <p className="mt-1 text-lg text-gray-400">
+              <p className="mt-1 text-lg text-gray-300">
                 {ECOSYSTEM.author.subtitle}
               </p>
 
-              <p className="mt-6 text-lg text-gray-400 max-w-xl">
+              <p className="mt-6 text-lg/7 text-gray-300 max-w-xl text-pretty">
                 Construyo productos digitales que resuelven problemas reales.
                 Desde traducción de libros con IA hasta sistemas de facturación fiscal.
               </p>
 
-              {/* CTAs */}
-              <div className="mt-8 flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
+              {/* CTAs - elegantes */}
+              <div className="mt-10 flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
                 <a
                   href="#productos"
-                  className="w-full sm:w-auto rounded-xl bg-indigo-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-indigo-500/25 hover:bg-indigo-400 transition-all hover:scale-105"
+                  className="w-full sm:w-auto rounded-xl bg-indigo-500 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-indigo-500/30 hover:bg-indigo-400 transition-all duration-200"
                 >
                   Ver productos
                 </a>
@@ -197,7 +199,7 @@ export function Hero() {
                   href={ECOSYSTEM.author.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full sm:w-auto rounded-xl bg-white/5 px-6 py-3 text-sm font-semibold text-white ring-1 ring-white/10 hover:bg-white/10 transition-all"
+                  className="w-full sm:w-auto rounded-xl bg-white/5 px-6 py-3.5 text-sm font-semibold text-white ring-1 ring-white/15 hover:bg-white/10 hover:ring-white/25 transition-all duration-200"
                 >
                   Hablemos
                 </a>

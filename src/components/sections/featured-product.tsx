@@ -36,7 +36,7 @@ export function FeaturedProduct() {
       {/* Background gradient */}
       <div className="absolute inset-0">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-linear-to-l from-indigo-500/10 to-transparent" />
-        <div className="absolute bottom-0 left-1/4 size-[600px] rounded-full bg-purple-500/10 blur-[128px]" />
+        <div className="absolute bottom-0 left-1/4 size-[600px] rounded-full bg-purple-500/10 blur-3xl" />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
@@ -49,8 +49,11 @@ export function FeaturedProduct() {
               Producto destacado
             </div>
 
-            <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
-              {lectorai?.name}
+            <h2 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
+              Conoce{" "}
+              <span className="bg-indigo-100 text-indigo-900 px-3 py-1 rounded-lg">
+                {lectorai?.name}
+              </span>
             </h2>
 
             <p className="mt-2 text-xl text-indigo-400 font-medium">
