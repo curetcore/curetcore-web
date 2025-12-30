@@ -2,57 +2,50 @@
 
 ## Última Sesión
 - **Fecha**: 2025-12-30
-- **Resumen**: Deploy exitoso a producción en Easypanel. Landing page LIVE en https://curetcore.com
+- **Resumen**: Limpieza de código, optimización de performance, y configuración de Cloudflare para GEO (bots de IA permitidos)
 
-## Deploy Completado
-- **Proyecto**: apps/curetcore-web
+## Deploy
 - **URL**: https://curetcore.com
-- **Build**: Dockerfile (Next.js standalone)
-- **Puerto interno**: 80 (overriden por Easypanel)
 - **Estado**: ✅ Running
-
-## Archivos Clave
-- `src/app/page.tsx` - Nueva estructura de 6 secciones
-- `src/components/sections/hero.tsx` - Layout 2 columnas, stats integrados, partner logos
-- `src/components/sections/featured-product.tsx` - Spotlight de LectorAI
-- `src/components/sections/products.tsx` - NCF Manager + Shopify Apps
-- `src/components/sections/cta.tsx` - CTA final
-- `src/config/ecosystem.ts` - Datos centralizados
-- `Dockerfile` - Multi-stage build para standalone
-- `next.config.ts` - output: "standalone"
+- **Build**: Dockerfile (Next.js standalone)
 
 ## Estado Actual
-- ✅ Deploy en Easypanel (apps/curetcore-web)
-- ✅ HTTPS funcionando via Cloudflare
-- ✅ Nueva estructura narrativa implementada
-- ✅ Logos SVG reales (Shopify, Apple, AWS, Stripe)
-- ✅ Featured Product con mockup interactivo
-- ⚠️ Foto `/public/ronaldo.jpg` pendiente (usando placeholder)
-- ⚠️ OG Image `/public/og-image.png` pendiente
+- ✅ Landing page LIVE en producción
+- ✅ Foto de Ronaldo integrada
+- ✅ OG Image generado (1024x1024)
+- ✅ SEO completo (robots.ts, sitemap.ts, llms.txt)
+- ✅ GEO activo - bots de IA permitidos (GPTBot, ClaudeBot, PerplexityBot)
+- ✅ Performance optimizada (will-change en animaciones)
+- ✅ Código limpio (5 componentes sin usar eliminados)
 
-## Arquitectura de Secciones
+## Arquitectura de Secciones (4 activas)
 
 ```
-1. Hero        → Quién soy + credibilidad
-2. Featured    → LectorAI (producto estrella)
-3. Products    → NCF Manager + Shopify Apps
-4. Timeline    → Historia 2017-2024
-5. Stack       → Tecnologías/Partners
-6. CTA         → Llamada a la acción final
+1. Hero     → Quién soy + credibilidad + stats
+2. Projects → 3 productos (LectorAI, NCF Manager, Shopify)
+3. Stack    → Marquee rotativo de tecnologías
+4. CTA      → Llamada a la acción final
 ```
+
+## Archivos Clave
+- `src/app/page.tsx` - Composición de 4 secciones
+- `src/components/sections/hero.tsx` - Hero con foto, nav, stats
+- `src/components/sections/projects.tsx` - 3 productos con mockups
+- `src/components/sections/stack.tsx` - Marquee rotativo de logos
+- `src/components/sections/cta.tsx` - CTA final
+- `src/config/ecosystem.ts` - Datos centralizados
+
+## GEO (Generative Engine Optimization)
+- `/robots.txt` - Permite GPTBot, ClaudeBot, PerplexityBot, Amazonbot
+- `/sitemap.xml` - Sitemap dinámico
+- `/llms.txt` - Info estructurada para AI crawlers
+- **Cloudflare**: Managed robots.txt DESACTIVADO
 
 ## Configuración de Dominio
 - Host: curetcore.com
-- Destino: http://apps_curetcore-web:80/
 - SSL: Via Cloudflare (proxy enabled)
+- AI Bots: Permitidos (configurado en Cloudflare)
 
-## Notas Técnicas
-- Next.js corre en puerto 80 dentro del contenedor (Easypanel override)
-- La configuración de dominio debe apuntar a :80, no :3000
-- El servicio viejo `curetcore-web_curetcore-web` fue eliminado
-
-## Próximos Pasos
-1. Agregar foto real de Ronaldo (`/public/ronaldo.jpg`)
-2. Crear OG Image para compartir en redes
-3. Verificar SEO y JSON-LD
-4. Limpiar archivos no usados (stats.tsx, social-proof.tsx)
+## Notas para Próxima Sesión
+- og-image es 1024x1024 (Gemini no soporta dimensiones custom), funciona pero no es óptimo para social
+- Si se necesitan más secciones, los archivos eliminados están en git history
