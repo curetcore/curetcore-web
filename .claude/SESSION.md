@@ -12,7 +12,7 @@
 ## Estado Actual
 - ✅ Landing page LIVE en producción
 - ✅ Foto de Ronaldo integrada
-- ✅ OG Image generado (1024x1024)
+- ✅ OG Image generado (1200x630 - dimensiones estándar)
 - ✅ SEO completo (robots.ts, sitemap.ts, llms.txt)
 - ✅ GEO activo - bots de IA permitidos (GPTBot, ClaudeBot, PerplexityBot)
 - ✅ Performance optimizada (will-change en animaciones)
@@ -47,5 +47,4 @@
 - AI Bots: Permitidos (configurado en Cloudflare)
 
 ## Notas para Próxima Sesión
-- og-image es 1024x1024 (Gemini no soporta dimensiones custom), funciona pero no es óptimo para social
 - Si se necesitan más secciones, los archivos eliminados están en git history
