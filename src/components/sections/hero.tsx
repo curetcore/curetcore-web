@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { StarIcon } from "@heroicons/react/24/solid";
@@ -123,9 +124,12 @@ export function Hero() {
           {/* Photo */}
           <div className="relative group inline-block mb-8">
             <div className="absolute -inset-4 rounded-full bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 opacity-30 blur-2xl group-hover:opacity-50 transition-opacity" />
-            <img
+            <Image
               src={ECOSYSTEM.author.image}
               alt={ECOSYSTEM.author.name}
+              width={160}
+              height={160}
+              priority
               className="relative size-32 sm:size-40 rounded-full object-cover ring-4 ring-white/20"
             />
             {/* Online indicator */}
