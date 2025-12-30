@@ -96,11 +96,6 @@ export function CTA() {
             ))}
           </div>
 
-          {/* Availability indicator */}
-          <div className="mt-12 inline-flex items-center gap-2 rounded-full bg-emerald-500/10 px-4 py-2 text-sm text-emerald-400 ring-1 ring-inset ring-emerald-500/20">
-            <span className="size-2 rounded-full bg-emerald-400 animate-pulse" />
-            Actualmente disponible para nuevos proyectos
-          </div>
         </div>
       </div>
     </div>

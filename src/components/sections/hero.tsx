@@ -119,105 +119,93 @@ export function Hero() {
 
       {/* Hero content */}
       <div className="relative px-6 lg:px-8">
-        <div className="mx-auto max-w-5xl py-20 sm:py-32">
-          <div className="flex flex-col lg:flex-row lg:items-center lg:gap-16">
-            {/* Left: Photo + Quick stats */}
-            <div className="flex flex-col items-center lg:items-start">
-              {/* Photo */}
-              <div className="relative group">
-                <div className="absolute -inset-4 rounded-full bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 opacity-30 blur-2xl group-hover:opacity-50 transition-opacity" />
-                <img
-                  src={ECOSYSTEM.author.image}
-                  alt={ECOSYSTEM.author.name}
-                  className="relative size-40 sm:size-48 rounded-full object-cover ring-4 ring-white/20"
-                />
-                {/* Online indicator */}
-                <div className="absolute bottom-2 right-2 size-6 rounded-full bg-emerald-500 ring-4 ring-gray-900 flex items-center justify-center">
-                  <span className="size-2 rounded-full bg-white animate-pulse" />
-                </div>
-              </div>
-
-              {/* Quick stats under photo - más prominentes */}
-              <div className="mt-8 flex items-center gap-6 text-center lg:text-left">
-                <div>
-                  <div className="text-3xl font-extrabold text-white">8+</div>
-                  <div className="text-xs text-gray-400 font-medium">Años</div>
-                </div>
-                <div className="h-10 w-px bg-white/10" />
-                <div>
-                  <div className="text-3xl font-extrabold text-white">100K+</div>
-                  <div className="text-xs text-gray-400 font-medium">Clientes</div>
-                </div>
-                <div className="h-10 w-px bg-white/10" />
-                <div className="flex flex-col items-center lg:items-start">
-                  <div className="flex items-center gap-1.5">
-                    <span className="text-3xl font-extrabold text-white">4.8</span>
-                    <StarIcon className="size-6 text-amber-400" />
-                  </div>
-                  <div className="text-xs text-gray-400 font-medium">Google</div>
-                </div>
-              </div>
+        <div className="mx-auto max-w-3xl py-20 sm:py-32 text-center">
+          {/* Photo */}
+          <div className="relative group inline-block mb-8">
+            <div className="absolute -inset-4 rounded-full bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 opacity-30 blur-2xl group-hover:opacity-50 transition-opacity" />
+            <img
+              src={ECOSYSTEM.author.image}
+              alt={ECOSYSTEM.author.name}
+              className="relative size-32 sm:size-40 rounded-full object-cover ring-4 ring-white/20"
+            />
+            {/* Online indicator */}
+            <div className="absolute bottom-1 right-1 size-5 rounded-full bg-emerald-500 ring-4 ring-gray-900 flex items-center justify-center">
+              <span className="size-1.5 rounded-full bg-white animate-pulse" />
             </div>
+          </div>
 
-            {/* Right: Content */}
-            <div className="mt-12 lg:mt-0 flex-1 text-center lg:text-left">
-              {/* Badge */}
-              <div className="inline-flex items-center gap-2 rounded-full bg-indigo-500/10 px-4 py-1.5 text-sm text-indigo-400 ring-1 ring-inset ring-indigo-500/20 mb-6">
-                <span className="size-1.5 rounded-full bg-indigo-400 animate-pulse" />
-                Disponible para proyectos
+          {/* Stats */}
+          <div className="flex items-center justify-center gap-6 mb-8">
+            <div>
+              <div className="text-2xl font-extrabold text-white">8+</div>
+              <div className="text-xs text-gray-400 font-medium">Años</div>
+            </div>
+            <div className="h-8 w-px bg-white/10" />
+            <div>
+              <div className="text-2xl font-extrabold text-white">100K+</div>
+              <div className="text-xs text-gray-400 font-medium">Clientes</div>
+            </div>
+            <div className="h-8 w-px bg-white/10" />
+            <div>
+              <div className="flex items-center justify-center gap-1">
+                <span className="text-2xl font-extrabold text-white">4.8</span>
+                <StarIcon className="size-5 text-amber-400" />
               </div>
+              <div className="text-xs text-gray-400 font-medium">Google</div>
+            </div>
+          </div>
 
-              <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-7xl">
-                Ronaldo{" "}
-                <span className="bg-amber-100 text-zinc-900 px-3 py-1 rounded-lg">
-                  Paulino
-                </span>
-              </h1>
+          {/* Name */}
+          <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-7xl">
+            Ronaldo{" "}
+            <span className="bg-amber-100 text-zinc-900 px-3 py-1 rounded-lg">
+              Paulino
+            </span>
+          </h1>
 
-              <p className="mt-4 text-xl text-indigo-400 font-semibold">
-                {ECOSYSTEM.author.title}
-              </p>
+          {/* Titles */}
+          <p className="mt-4 text-xl text-indigo-400 font-semibold">
+            {ECOSYSTEM.author.title}
+          </p>
+          <p className="mt-1 text-lg text-gray-300">
+            {ECOSYSTEM.author.subtitle}
+          </p>
 
-              <p className="mt-1 text-lg text-gray-300">
-                {ECOSYSTEM.author.subtitle}
-              </p>
+          {/* Description */}
+          <p className="mt-6 text-lg/7 text-gray-300 max-w-xl mx-auto text-pretty">
+            Construyo productos digitales que resuelven problemas reales.
+            Desde traducción de libros con IA hasta sistemas de facturación fiscal.
+          </p>
 
-              <p className="mt-6 text-lg/7 text-gray-300 max-w-xl text-pretty">
-                Construyo productos digitales que resuelven problemas reales.
-                Desde traducción de libros con IA hasta sistemas de facturación fiscal.
-              </p>
+          {/* CTAs */}
+          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="#productos"
+              className="w-full sm:w-auto rounded-xl bg-indigo-500 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-indigo-500/30 hover:bg-indigo-400 transition-all duration-200"
+            >
+              Ver productos
+            </a>
+            <a
+              href={ECOSYSTEM.author.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto rounded-xl bg-white/5 px-6 py-3.5 text-sm font-semibold text-white ring-1 ring-white/15 hover:bg-white/10 hover:ring-white/25 transition-all duration-200"
+            >
+              Hablemos
+            </a>
+          </div>
 
-              {/* CTAs - elegantes */}
-              <div className="mt-10 flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
-                <a
-                  href="#productos"
-                  className="w-full sm:w-auto rounded-xl bg-indigo-500 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-indigo-500/30 hover:bg-indigo-400 transition-all duration-200"
-                >
-                  Ver productos
-                </a>
-                <a
-                  href={ECOSYSTEM.author.instagram}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full sm:w-auto rounded-xl bg-white/5 px-6 py-3.5 text-sm font-semibold text-white ring-1 ring-white/15 hover:bg-white/10 hover:ring-white/25 transition-all duration-200"
-                >
-                  Hablemos
-                </a>
-              </div>
-
-              {/* Partner logos */}
-              <div className="mt-12 pt-8 border-t border-white/10">
-                <p className="text-xs text-gray-500 uppercase tracking-wider mb-4">
-                  Trabajo con
-                </p>
-                <div className="flex items-center gap-8 justify-center lg:justify-start">
-                  {partnerLogos.map(({ name, Logo }) => (
-                    <div key={name} className="text-gray-500 hover:text-gray-300 transition-colors">
-                      <Logo className="h-6 w-auto" />
-                    </div>
-                  ))}
+          {/* Partner logos */}
+          <div className="mt-12 pt-8 border-t border-white/10">
+            <p className="text-xs text-gray-500 uppercase tracking-wider mb-4">
+              Trabajo con
+            </p>
+            <div className="flex items-center justify-center gap-8">
+              {partnerLogos.map(({ name, Logo }) => (
+                <div key={name} className="text-gray-500 hover:text-gray-300 transition-colors">
+                  <Logo className="h-6 w-auto" />
                 </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
