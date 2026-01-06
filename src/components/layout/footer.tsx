@@ -143,6 +143,45 @@ export function Footer() {
                   </li>
                 </ul>
               </div>
+
+              {/* Legal y soporte */}
+              <div className="mt-10 md:mt-0">
+                <h3 className="text-sm/6 font-semibold text-white">Legal</h3>
+                <ul role="list" className="mt-6 space-y-4">
+                  <li>
+                    <a
+                      href="/privacidad"
+                      className="text-sm/6 text-gray-400 hover:text-gray-300"
+                    >
+                      Privacidad
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/faq"
+                      className="text-sm/6 text-gray-400 hover:text-gray-300"
+                    >
+                      FAQ
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/docs"
+                      className="text-sm/6 text-gray-400 hover:text-gray-300"
+                    >
+                      Documentacion
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/soporte"
+                      className="text-sm/6 text-gray-400 hover:text-gray-300"
+                    >
+                      Soporte
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
