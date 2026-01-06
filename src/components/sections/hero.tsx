@@ -22,7 +22,7 @@ export function Hero() {
     <div className="relative bg-gray-900 overflow-hidden">
       {/* Background effects - optimizado */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/3 size-[600px] rounded-full bg-indigo-500/15 blur-3xl" />
+        <div className="absolute top-1/4 left-1/3 size-[600px] rounded-full bg-emerald-500/15 blur-3xl" />
       </div>
 
       {/* Header */}
@@ -30,7 +30,7 @@ export function Hero() {
         <nav className="flex items-center justify-between p-6 lg:px-8">
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5 flex items-center gap-2">
-              <div className="size-8 rounded-lg bg-indigo-500 flex items-center justify-center">
+              <div className="size-8 rounded-lg bg-emerald-500 flex items-center justify-center">
                 <span className="text-white font-bold text-sm">C</span>
               </div>
               <span className="text-xl font-bold text-white">
@@ -85,7 +85,7 @@ export function Hero() {
           <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5 flex items-center gap-2">
-                <div className="size-8 rounded-lg bg-indigo-500 flex items-center justify-center">
+                <div className="size-8 rounded-lg bg-emerald-500 flex items-center justify-center">
                   <span className="text-white font-bold text-sm">C</span>
                 </div>
                 <span className="text-xl font-bold text-white">{ECOSYSTEM.techDivision.name}</span>
@@ -123,7 +123,7 @@ export function Hero() {
         <div className="mx-auto max-w-3xl py-20 sm:py-32 text-center">
           {/* Photo */}
           <div className="relative group inline-block mb-8">
-            <div className="absolute -inset-4 rounded-full bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 opacity-30 blur-2xl group-hover:opacity-50 transition-opacity" />
+            <div className="absolute -inset-4 rounded-full bg-gradient-to-tr from-emerald-500 via-green-500 to-amber-500 opacity-30 blur-2xl group-hover:opacity-50 transition-opacity" />
             <Image
               src={ECOSYSTEM.author.image}
               alt={ECOSYSTEM.author.name}
@@ -168,7 +168,7 @@ export function Hero() {
           </h1>
 
           {/* Titles */}
-          <p className="mt-4 text-xl text-indigo-400 font-semibold">
+          <p className="mt-4 text-xl text-emerald-400 font-semibold">
             Software Engineer & Entrepreneur
           </p>
           <p className="mt-1 text-lg text-gray-400">
@@ -185,7 +185,7 @@ export function Hero() {
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="#productos"
-              className="w-full sm:w-auto rounded-xl bg-indigo-500 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-indigo-500/30 hover:bg-indigo-400 transition-all duration-200"
+              className="w-full sm:w-auto rounded-xl bg-emerald-500 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-emerald-500/30 hover:bg-emerald-400 transition-all duration-200"
             >
               Ver productos
             </a>

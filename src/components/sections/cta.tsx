@@ -12,7 +12,7 @@ const contactOptions = [
     description: "La forma más rápida de contactarme",
     href: ECOSYSTEM.author.instagram,
     label: "@_ronaldopaulino",
-    color: "from-pink-500 to-rose-500",
+    color: "from-amber-500 to-orange-500",
   },
   {
     icon: CodeBracketIcon,
@@ -28,7 +28,7 @@ const contactOptions = [
     description: "Proyectos serios y partnerships",
     href: `mailto:${ECOSYSTEM.author.email}`,
     label: ECOSYSTEM.author.email,
-    color: "from-indigo-500 to-purple-500",
+    color: "from-emerald-500 to-green-500",
   },
 ];
 
@@ -37,8 +37,8 @@ export function CTA() {
     <div className="relative bg-gray-900 py-24 sm:py-32 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-linear-to-b from-transparent via-indigo-500/5 to-transparent" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-[800px] rounded-full bg-indigo-500/10 blur-3xl" />
+        <div className="absolute inset-0 bg-linear-to-b from-transparent via-emerald-500/5 to-transparent" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-[800px] rounded-full bg-emerald-500/10 blur-3xl" />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
@@ -63,7 +63,7 @@ export function CTA() {
               href={ECOSYSTEM.author.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-xl bg-indigo-500 px-8 py-4 text-lg font-semibold text-white shadow-lg shadow-indigo-500/25 hover:bg-indigo-400 transition-all hover:scale-105"
+              className="inline-flex items-center gap-2 rounded-xl bg-emerald-500 px-8 py-4 text-lg font-semibold text-white shadow-lg shadow-emerald-500/25 hover:bg-emerald-400 transition-all hover:scale-105"
             >
               <ChatBubbleLeftRightIcon className="size-6" />
               Hit me up
@@ -89,7 +89,7 @@ export function CTA() {
                 <p className="mt-1 text-sm text-gray-400 text-center">
                   {option.description}
                 </p>
-                <span className="mt-3 text-sm font-medium text-indigo-400 group-hover:text-indigo-300">
+                <span className="mt-3 text-sm font-medium text-emerald-400 group-hover:text-emerald-300">
                   {option.label}
                 </span>
               </a>
