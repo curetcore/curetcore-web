@@ -5,14 +5,14 @@ import { ECOSYSTEM } from "@/config/ecosystem";
 export const metadata: Metadata = {
   title: "Politica de privacidad - Curetcore",
   description:
-    "Politica de privacidad de Curetcore y sus productos digitales: LectorAI, NCF Manager, Curetcore Connector.",
+    "Politica de privacidad de Curetcore y sus productos digitales: LectorAI, NCF Manager, Curetcore Connector, Stock Value.",
   alternates: {
     canonical: "https://curetcore.com/privacidad",
   },
 };
 
 export default function PrivacidadPage() {
-  const lastUpdated = "6 de enero de 2025";
+  const lastUpdated = "6 de enero de 2026";
 
   return (
     <main className="min-h-screen bg-gray-900">
@@ -85,6 +85,13 @@ export default function PrivacidadPage() {
                   integracion de servicios
                 </span>
               </li>
+              <li className="flex items-start gap-3">
+                <span className="text-indigo-400">•</span>
+                <span>
+                  <strong>Stock Value</strong> - App de Shopify para valoracion
+                  de inventario
+                </span>
+              </li>
             </ul>
           </section>
 
@@ -139,6 +146,42 @@ export default function PrivacidadPage() {
                 <span>
                   <strong>Productos</strong> - Para sincronizacion con sistemas
                   ERP
+                </span>
+              </li>
+            </ul>
+
+            <h3 className="text-xl font-semibold text-white mt-6 mb-3">
+              Datos de Shopify (Stock Value)
+            </h3>
+            <p className="text-gray-300 mb-4">
+              Cuando instalas Stock Value en tu tienda Shopify, accedemos a:
+            </p>
+            <ul className="space-y-2 text-gray-300">
+              <li className="flex items-start gap-3">
+                <span className="text-indigo-400">•</span>
+                <span>
+                  <strong>Inventario</strong> - Cantidades de stock para calcular
+                  valoracion
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-indigo-400">•</span>
+                <span>
+                  <strong>Productos</strong> - Precios y variantes para calcular
+                  valor total
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-indigo-400">•</span>
+                <span>
+                  <strong>Ubicaciones</strong> - Para valoracion por almacen
+                </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-indigo-400">•</span>
+                <span>
+                  <strong>Ordenes</strong> - Para calcular costo promedio
+                  ponderado (COGS)
                 </span>
               </li>
             </ul>
@@ -312,7 +355,8 @@ export default function PrivacidadPage() {
               Cumplimiento GDPR (Shopify)
             </h2>
             <p className="text-gray-300 mb-4">
-              Curetcore Connector cumple con los requisitos de GDPR de Shopify:
+              Nuestras apps de Shopify (Curetcore Connector y Stock Value) cumplen
+              con los requisitos de GDPR:
             </p>
             <ul className="space-y-2 text-gray-300">
               <li className="flex items-start gap-3">
