@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque } from "next/font/google";
+import { Bricolage_Grotesque, Caveat } from "next/font/google";
 import "./globals.css";
 import { Footer } from "@/components/layout/footer";
 import { JsonLd } from "@/components/seo/jsonld";
@@ -8,6 +8,12 @@ const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
   variable: "--font-bricolage",
   weight: ["400", "500", "600", "700", "800"],
+});
+
+const caveat = Caveat({
+  subsets: ["latin"],
+  variable: "--font-caveat",
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -70,7 +76,7 @@ export default function RootLayout({
         <JsonLd />
       </head>
       <body
-        className={`${bricolage.variable} font-sans antialiased bg-gray-900 text-white`}
+        className={`${bricolage.variable} ${caveat.variable} font-sans antialiased bg-gray-900 text-white`}
       >
         {children}
         <Footer />
