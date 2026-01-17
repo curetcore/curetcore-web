@@ -12,6 +12,7 @@ import {
   CubeIcon,
   TruckIcon,
 } from "@heroicons/react/24/outline";
+import { SVGDecoration } from "@/components/ui/svg-decoration";
 
 const projects = [
   {
@@ -504,10 +505,28 @@ export function Projects() {
       <div className="relative py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-            <span className="bg-emerald-100 text-emerald-900 px-3 py-1 rounded-lg">Productos</span> del ecosistema
+            <span className="relative inline-block bg-emerald-100 text-emerald-900 px-3 py-1 rounded-lg">
+              Productos
+              <SVGDecoration
+                variant="wave"
+                animated
+                className="absolute -bottom-2 left-0 h-2 w-full fill-emerald-500"
+              />
+            </span>
+            {" del ecosistema"}
           </h2>
           <p className="mt-4 text-lg text-gray-400 max-w-2xl mx-auto">
-            Soluciones que transforman negocios. Desde e-commerce hasta facturación fiscal.
+            Soluciones que{" "}
+            <span className="relative inline-block">
+              transforman
+              <SVGDecoration
+                variant="wave"
+                animated
+                delay={200}
+                className="absolute -bottom-1 left-0 h-1.5 w-full fill-emerald-500/40"
+              />
+            </span>
+            {" negocios. Desde e-commerce hasta facturación fiscal."}
           </p>
         </div>
       </div>
@@ -565,9 +584,14 @@ export function Projects() {
 
                   {/* Features */}
                   <div className="mt-8 space-y-3">
-                    {project.features.map((feature) => (
+                    {project.features.map((feature, featureIndex) => (
                       <div key={feature} className="flex items-center gap-3">
-                        <CheckCircleIcon className={`size-5 ${colors.text}`} />
+                        <SVGDecoration
+                          variant="checkmark"
+                          animated
+                          delay={featureIndex * 100}
+                          className={`size-5 ${colors.text} stroke-current fill-none stroke-2`}
+                        />
                         <span className="text-gray-300">{feature}</span>
                       </div>
                     ))}

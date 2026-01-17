@@ -7,6 +7,8 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { StarIcon } from "@heroicons/react/24/solid";
 import { ECOSYSTEM, NAVIGATION } from "@/config/ecosystem";
 import { logos } from "@/components/ui/logos";
+import { SVGDecoration } from "@/components/ui/svg-decoration";
+import { SVGAnnotation } from "@/components/ui/svg-annotation";
 
 const partnerLogos = [
   { name: "Shopify", Logo: logos.Shopify },
@@ -141,18 +143,42 @@ export function Hero() {
           {/* Stats */}
           <div className="flex items-center justify-center gap-6 mb-8">
             <div>
-              <div className="text-2xl font-extrabold text-white">8+</div>
+              <div className="relative inline-block text-2xl font-extrabold text-white">
+                8+
+                <SVGDecoration
+                  variant="thick"
+                  animated
+                  delay={100}
+                  className="absolute -bottom-1 left-0 h-1.5 w-full fill-emerald-500/60"
+                />
+              </div>
               <div className="text-xs text-gray-400 font-medium">Años</div>
             </div>
             <div className="h-8 w-px bg-white/10" />
             <div>
-              <div className="text-2xl font-extrabold text-white">100K+</div>
+              <div className="relative inline-block text-2xl font-extrabold text-white">
+                100K+
+                <SVGDecoration
+                  variant="thick"
+                  animated
+                  delay={200}
+                  className="absolute -bottom-1 left-0 h-1.5 w-full fill-emerald-500/60"
+                />
+              </div>
               <div className="text-xs text-gray-400 font-medium">Clientes</div>
             </div>
             <div className="h-8 w-px bg-white/10" />
             <div>
               <div className="flex items-center justify-center gap-1">
-                <span className="text-2xl font-extrabold text-white">4.8</span>
+                <span className="relative inline-block text-2xl font-extrabold text-white">
+                  4.8
+                  <SVGDecoration
+                    variant="thick"
+                    animated
+                    delay={300}
+                    className="absolute -bottom-1 left-0 h-1.5 w-full fill-amber-400/60"
+                  />
+                </span>
                 <StarIcon className="size-5 text-amber-400" />
               </div>
               <div className="text-xs text-gray-400 font-medium">Google</div>
@@ -162,14 +188,28 @@ export function Hero() {
           {/* Name */}
           <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-7xl">
             Ronaldo{" "}
-            <span className="bg-amber-100 text-zinc-900 px-3 py-1 rounded-lg">
+            <span className="relative inline-block bg-amber-100 text-zinc-900 px-3 py-1 rounded-lg">
               Paulino
+              <SVGDecoration
+                variant="swirl"
+                animated
+                className="absolute -bottom-3 left-0 h-3 w-full fill-amber-400"
+              />
             </span>
           </h1>
 
           {/* Titles */}
           <p className="mt-4 text-xl text-emerald-400 font-semibold">
-            Software Engineer & Entrepreneur
+            <span className="relative inline-block">
+              Software Engineer
+              <SVGDecoration
+                variant="wave"
+                animated
+                delay={300}
+                className="absolute -bottom-1 left-0 h-2 w-full fill-emerald-500/50"
+              />
+            </span>
+            {" & Entrepreneur"}
           </p>
           <p className="mt-1 text-lg text-gray-400">
             Haciendo cosas cool en República Dominicana
@@ -183,12 +223,22 @@ export function Hero() {
 
           {/* CTAs */}
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href="#productos"
-              className="w-full sm:w-auto rounded-xl bg-emerald-500 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-emerald-500/30 hover:bg-emerald-400 transition-all duration-200"
-            >
-              Ver productos
-            </a>
+            <div className="relative">
+              <SVGAnnotation
+                text="Mira lo que he creado"
+                direction="top-left"
+                color="text-amber-400"
+                size="sm"
+                animated
+                className="absolute -top-10 -left-4 hidden sm:block"
+              />
+              <a
+                href="#productos"
+                className="w-full sm:w-auto rounded-xl bg-emerald-500 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-emerald-500/30 hover:bg-emerald-400 transition-all duration-200"
+              >
+                Ver productos
+              </a>
+            </div>
             <a
               href={ECOSYSTEM.author.instagram}
               target="_blank"

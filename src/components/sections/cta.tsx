@@ -4,6 +4,8 @@ import {
   ChatBubbleLeftRightIcon,
   CodeBracketIcon,
 } from "@heroicons/react/24/outline";
+import { SVGDecoration } from "@/components/ui/svg-decoration";
+import { SVGAnnotation } from "@/components/ui/svg-annotation";
 
 const contactOptions = [
   {
@@ -46,19 +48,42 @@ export function CTA() {
           {/* Main heading */}
           <h2 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
             Let's build something{" "}
-            <span className="bg-amber-100 text-zinc-900 px-3 py-1 rounded-lg">
+            <span className="relative inline-block bg-amber-100 text-zinc-900 px-3 py-1 rounded-lg">
               cool
+              <SVGDecoration
+                variant="swirl"
+                animated
+                className="absolute -bottom-3 left-0 h-3 w-full fill-amber-400"
+              />
             </span>
           </h2>
 
           <p className="mt-6 text-lg text-gray-400 max-w-xl mx-auto">
-            ¿Tienes una idea? ¿Necesitas un dev? ¿Quieres colaborar?
+            ¿Tienes una{" "}
+            <span className="relative inline-block">
+              idea
+              <SVGDecoration
+                variant="wave"
+                animated
+                delay={200}
+                className="absolute -bottom-1 left-0 h-1.5 w-full fill-emerald-500/40"
+              />
+            </span>
+            ? ¿Necesitas un dev? ¿Quieres colaborar?
             <br />
             Solo escríbeme.
           </p>
 
           {/* Primary CTA */}
-          <div className="mt-10">
+          <div className="mt-10 relative inline-block">
+            <SVGAnnotation
+              text="La gente está obsesionada"
+              direction="top-right"
+              color="text-amber-400"
+              size="sm"
+              animated
+              className="absolute -top-12 -right-8 hidden sm:block"
+            />
             <a
               href={ECOSYSTEM.author.instagram}
               target="_blank"

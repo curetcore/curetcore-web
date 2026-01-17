@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import { SVGDecoration } from "@/components/ui/svg-decoration";
 
 export const metadata: Metadata = {
   title: "Documentacion - Curetcore",
@@ -228,10 +229,26 @@ export default function DocsPage() {
       <div className="mx-auto max-w-6xl px-6 py-16">
         <header className="mb-12 text-center">
           <h1 className="text-4xl font-extrabold tracking-tight text-white mb-4">
-            Documentacion
+            <span className="relative inline-block">
+              Documentacion
+              <SVGDecoration
+                variant="marker"
+                animated
+                className="absolute -bottom-2 left-0 h-2 w-full stroke-amber-500 fill-none stroke-2"
+              />
+            </span>
           </h1>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-            Guias, tutoriales y recursos para aprovechar al maximo los productos
+            <span className="relative inline-block">
+              Guias
+              <SVGDecoration
+                variant="marker"
+                animated
+                delay={200}
+                className="absolute -bottom-1 left-0 h-1.5 w-full stroke-amber-500/50 fill-none stroke-2"
+              />
+            </span>
+            , tutoriales y recursos para aprovechar al maximo los productos
             de Curetcore.
           </p>
         </header>

@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import { SVGDecoration } from "@/components/ui/svg-decoration";
 
 export const metadata: Metadata = {
   title: "Preguntas frecuentes - Curetcore",
@@ -124,7 +125,15 @@ export default function FAQPage() {
       <div className="mx-auto max-w-4xl px-6 py-16">
         <header className="mb-12">
           <h1 className="text-4xl font-extrabold tracking-tight text-white mb-4">
-            Preguntas frecuentes
+            Preguntas{" "}
+            <span className="relative inline-block">
+              frecuentes
+              <SVGDecoration
+                variant="wave"
+                animated
+                className="absolute -bottom-2 left-0 h-3 w-full fill-indigo-500"
+              />
+            </span>
           </h1>
           <p className="text-lg text-gray-400">
             Respuestas a las preguntas mas comunes sobre nuestros productos.

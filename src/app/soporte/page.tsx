@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { ECOSYSTEM } from "@/config/ecosystem";
+import { SVGDecoration } from "@/components/ui/svg-decoration";
 
 export const metadata: Metadata = {
   title: "Soporte - Curetcore",
@@ -86,10 +87,27 @@ export default function SoportePage() {
       <div className="mx-auto max-w-4xl px-6 py-16">
         <header className="mb-12 text-center">
           <h1 className="text-4xl font-extrabold tracking-tight text-white mb-4">
-            Soporte
+            <span className="relative inline-block">
+              Soporte
+              <SVGDecoration
+                variant="wave"
+                animated
+                className="absolute -bottom-2 left-0 h-3 w-full fill-indigo-500"
+              />
+            </span>
           </h1>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-            Estamos aqui para ayudarte. Elige el canal que prefieras.
+            Estamos aqui para{" "}
+            <span className="relative inline-block">
+              ayudarte
+              <SVGDecoration
+                variant="wave"
+                animated
+                delay={200}
+                className="absolute -bottom-1 left-0 h-1.5 w-full fill-indigo-500/40"
+              />
+            </span>
+            . Elige el canal que prefieras.
           </p>
         </header>
 
